@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-language" content="pt-br">
+        <meta name="author" content="Wilson Junior">
+        <meta name="description" content="Developer Front-end Jr & UI Designer">
+        <meta name="copyright" content="WS 2021">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="theme-color" content="#6610F2"> -->
+
+        <title>Wilson Junior - Developer Front-end Jr & UI Designer</title> 
+
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="assets/svg/icon.svg" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                } 
+            });
+        });
+    </script>
+    <body>
+      
+        <header>
+            <a href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a>
+            <div id="links">
+                <a href="#quemSou">Quem sou</a>
+                <a href="#projetos">Projetos</a>
+                <a>Serviços</a>
+                <a>Conhecimento</a>
+            </div>
+        </header>
+        <section id="banner">
+            <div >
+                <h3>Olá, eu sou o</h3>
+                <h1>Wilson Junior</h1>
+                <h3 id="text">Developer Front-end Jr e UI Designer.</h3>
+            </div>
+            <script>
+                function typeWriter(elemento) {
+                    const textoArray = elemento.innerHTML.split('');
+                    elemento.innerHTML = '';
+                        textoArray.forEach((letra, i) => {
+                            setTimeout(() => elemento.innerHTML += letra, 75 * i);
+                        });
+                }
+        
+                const titulo = document.querySelector('#text');
+                typeWriter(titulo);
+            </script>
+            <img src="assets/svg/undraw_programming_2svr.svg">
+        </section>
+        <section>
+            <div id="quemSou" class="row">
+                <div>
+                    <h1>Quem sou</h1>
+                    <img src="assets/png/icon2.png" id="logo">
+                </div>
+                <div>
+                    <h5>
+                        Meu nome é Wilson de Souza Oliveira Junior,
+                        sou estudante do <b>Instituto Federal de Ciência e Tecnologia de São Paulo</b>, 
+                        cursando Técnico Integrado em Informática. Moro em São Paulo, São Paulo, atualmente sou apenas estudante.
+                    </h5>
+                    <h5>    
+                        Iniciei minha carreira na programação em 2018, no mercado de trabalho entrei em Abr/2019 
+                        como <i>Jovem Aprendiz de Programação</i>, quando chegou em Jan/2020 a empresa me efetivou
+                        fazendo com que eu exercesse o cargo de <i>Analista de Desenvolvimento e Criação</i>, onde fiquei
+                        reponsável pelo Desenvolvimento Front-End dos softwares e pela criação das prototipagem. Desde
+                        então venho sempre aprimorando minhas habilidades.
+                        Para saber mais, <a target="_Blank" href="https://www.linkedin.com/in/wilson-d-73761b203/"><b><i>clique aqui</i></b></a>.
+                    </h5>
+                </div>
+            </div>
+            <div id="projetos"  >
+                <h1>Projetos</h1>
+
+                <div id="buttonCarousel">
+                    <span class="arrow left" id="leftArrow" onclick="currentDiv(-2)"><img src="assets/svg/arrow.svg"></span>
+                    <div class="row" id="cardCarousel">
+                        <div class="card row">
+                            <div>
+                                <img  src="assets/png/logotipo.png" class="logoMarca">
+                                <h5>
+                                    Prototipagem desenvolvida para trabalho escolar. 
+                                </h5>
+                            </div>
+                            <img  src="assets/svg/3.svg" >               
+                        </div>
+                        
+                        <div class="card row">
+                            <div>
+                                <img  src="https://www.sirio.org.br/wp-content/uploads/esporte-clube-sirio-2.png" class="logoMarca">
+                                <h5>
+                                    Software e Prototipagem desenvolvido como Freelancer. 
+                                </h5>
+                            </div>
+                            <img  src="assets/svg/4.svg" >
+                        </div>
+        
+                        <div class="card row">
+                            <div>
+                                <img  src="assets/png/one.png" class="logoMarca">
+                                <h5>
+                                    Prototipagem feita em ambiente de trabalho.
+                                </h5>
+                            </div>
+                            <img  src="assets/svg/5.svg" >
+                        </div>
+                        <div class="card row">
+                            <div>
+                                <img  src="assets/svg/cb.svg" class="logoMarca">
+                                <h5>
+                                    Prototipagem feita em ambiente de trabalho.
+                                </h5>
+                            </div>               
+                            <img  src="assets/svg/6.svg" >               
+                        </div>
+                    </div>
+                    <span class="arrow" id="rigthArrow" onclick="currentDiv(2)"><img src="assets/svg/arrow.svg"></span>
+                </div>
+
+            </div>
+        </section>
+    </body>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+       
+
+        function currentDiv(n) {
+            showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+            var i;
+            var l = document.querySelector("#leftArrow");
+            var r = document.querySelector("#rigthArrow");
+
+            var x = document.getElementsByClassName("card");
+            
+            if (n >= x.length) {
+                slideIndex = 3;
+                r.style.opacity = ".2";   
+            } else if (n < 1) {
+                slideIndex = 1
+                l.style.opacity = ".2";   
+            } else {
+                l.style.opacity = "1";   
+                r.style.opacity = "1";   
+
+            }
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+
+            x[slideIndex].style.display = "flex";  
+            x[slideIndex-1].style.display = "flex";  
+
+        }
+    </script>
+</html>
