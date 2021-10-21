@@ -16,6 +16,7 @@ body{
     width: 100%;
     background-color: #17161D;
 
+    overflow-x: hidden;
 }
 html {
     scroll-behavior:smooth;
@@ -315,10 +316,10 @@ section h1, h2, h3, h4, h5{
 
 @keyframes circle {
     from {
-      transform: translateY(-70vh) translateX(82vw);
+      transform: translateY(-70vh) translateX(86vw);
 
     }
     to {
-      transform: translateY(-65vh) translateX(82vw);
+      transform: translateY(-65vh) translateX(86vw);
     }
 }
