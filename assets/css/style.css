@@ -12,6 +12,16 @@
 body{
     margin: 0;
     width: 100%;
+    background-color: #17161D;
+
+}
+html {
+    scroll-behavior:smooth;
+
+}
+
+:target {
+    scroll-margin-top: 10vh;
 }
 
 ::-webkit-scrollbar{
@@ -38,11 +48,6 @@ header{
     position: fixed;
     align-items: center;
     box-shadow: 0 0 .8em #131219;
-}
-
-section{
-    background-color: #17161D;
-
 }
 
 section h1, h2, h3, h4, h5{
@@ -119,7 +124,7 @@ section h1, h2, h3, h4, h5{
 
 }
 
-#quemSou, #projetos{
+#quemSou, #projetos, #servicos{
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -141,7 +146,7 @@ section h1, h2, h3, h4, h5{
     }
 }
 
-#quemSou h5, #projetos h5{
+#quemSou h5, #projetos h5, #servicos h5{
     opacity: .7;
     margin-left: 10vw;
     font-weight: 500;
@@ -149,7 +154,7 @@ section h1, h2, h3, h4, h5{
     max-width: 40vw ;
 }
 
-#quemSou h1{
+#quemSou h1, #servicos h1{
     margin-top: 4.49vh;
 }
 
@@ -159,7 +164,7 @@ section h1, h2, h3, h4, h5{
     margin-left: 5px;
     display: inline-block;
     animation: blink .7s infinite;
-  }
+}
 
 @keyframes blink {
     0%, 100% {
@@ -178,7 +183,7 @@ section h1, h2, h3, h4, h5{
     align-items: center;
 }
 
-.card{
+.cardProjetos, .cardServicos{
     height: 30vh;
     width: 30vw;
     background-color: #17161D;
@@ -189,13 +194,13 @@ section h1, h2, h3, h4, h5{
     justify-content: space-between;
 }
 
-.card:hover{
+.cardProjetos:hover, .cardServicos{
     border: solid 2px #39374e;
     transition: border .3s ease-in;
     cursor: pointer;
 }
 
-.card img{
+.cardProjetos img{
     height: 25vh;
     animation: mobile 4s infinite alternate;
 }
@@ -209,12 +214,6 @@ section h1, h2, h3, h4, h5{
     }
 }
 
-.demo{
-    width: 5vw;
-    height: 5vh;
-    background-color: red;
-}
-
 #cardCarousel{
     overflow: hidden;
     align-items: center;
@@ -224,7 +223,7 @@ section h1, h2, h3, h4, h5{
     justify-content: space-around;
 }
 
-#buttonCarousel{
+.Carousel{
     width: 90%;
     margin: 0;
     display: flex;
@@ -243,16 +242,77 @@ section h1, h2, h3, h4, h5{
     transform: rotate(180deg) !important;
 }
 
-.logoMarca{
+.imgCard{
     width: 10vw;
+    height: auto;
     object-fit: contain;
     animation: none !important;
     margin-bottom: 0;
 }
 
-#projetos h5{
-    max-width: 15vw;
+#projetos h5, #servicos h5{
+    max-width: 17vw;
+    transform: translateY(-10px);
     margin-top: 0;
     margin-left: 0;
-    position: relative;
+    margin-bottom: 3vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+#servicos h5{
+    margin: auto;
+}
+
+#servicos h4{
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+#servicos{
+    background-color: #17161D;
+    margin-bottom: 5vh;
+}
+
+.cardServicos{
+    background-color: #131219;
+    align-items: center;
+}
+
+#servicos .Carousel{
+    justify-content: space-around;
+    width: 80%;
+} 
+
+.circleLeft, .circleRight{
+    position: absolute;
+    height: 35vh;
+    transform: translateY(-10vh);
+}
+
+.circleRight{
+    margin-left: 85vw;
+    height: 30vh;
+
+    animation: none;    
+    transform: translateY(-20vh) !important;
+    
+}
+
+.top{
+    margin-left: 85vw;
+    transform: translateY(-70vh) !important;
+    animation: circle 8s infinite alternate;
+}
+
+@keyframes circle {
+    from {
+      transform: translateY(-70vh);
+    }
+    to {
+      transform: translateY(-65vh);
+    }
 }

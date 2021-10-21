@@ -16,21 +16,7 @@
         <link rel="shortcut icon" href="assets/svg/icon.svg" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
-    <script>
-        $(document).ready(function(){
-            $("a").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                        window.location.hash = hash;
-                    });
-                } 
-            });
-        });
-    </script>
+
     <body>
       
         <header>
@@ -38,7 +24,7 @@
             <div id="links">
                 <a href="#quemSou">Quem sou</a>
                 <a href="#projetos">Projetos</a>
-                <a>Serviços</a>
+                <a href="#servicos">Serviços</a>
                 <a>Conhecimento</a>
             </div>
         </header>
@@ -48,21 +34,10 @@
                 <h1>Wilson Junior</h1>
                 <h3 id="text">Developer Front-end Jr e UI Designer.</h3>
             </div>
-            <script>
-                function typeWriter(elemento) {
-                    const textoArray = elemento.innerHTML.split('');
-                    elemento.innerHTML = '';
-                        textoArray.forEach((letra, i) => {
-                            setTimeout(() => elemento.innerHTML += letra, 75 * i);
-                        });
-                }
-        
-                const titulo = document.querySelector('#text');
-                typeWriter(titulo);
-            </script>
             <img src="assets/svg/undraw_programming_2svr.svg">
         </section>
         <section>
+
             <div id="quemSou" class="row">
                 <div>
                     <h1>Quem sou</h1>
@@ -84,15 +59,17 @@
                     </h5>
                 </div>
             </div>
+
+            <img src="assets/svg/circle/2.svg" class="circleRight">
+
             <div id="projetos"  >
                 <h1>Projetos</h1>
-
-                <div id="buttonCarousel">
-                    <span class="arrow left" id="leftArrow" onclick="currentDiv(-2)"><img src="assets/svg/arrow.svg"></span>
+                <div class="Carousel">
+                    <span class="arrow left" id="leftArrow" onclick="currentDiv(-1)"><img src="assets/svg/arrow.svg"></span>
                     <div class="row" id="cardCarousel">
-                        <div class="card row">
+                        <div class="cardProjetos row">
                             <div>
-                                <img  src="assets/png/logotipo.png" class="logoMarca">
+                                <img  src="assets/png/logotipo.png" class="imgCard">
                                 <h5>
                                     Prototipagem desenvolvida para trabalho escolar. 
                                 </h5>
@@ -100,28 +77,27 @@
                             <img  src="assets/svg/3.svg" >               
                         </div>
                         
-                        <div class="card row">
+                        <div class="cardProjetos row">
                             <div>
-                                <img  src="https://www.sirio.org.br/wp-content/uploads/esporte-clube-sirio-2.png" class="logoMarca">
+                                <img  src="https://www.sirio.org.br/wp-content/uploads/esporte-clube-sirio-2.png" class="imgCard">
                                 <h5>
                                     Software e Prototipagem desenvolvido como Freelancer. 
                                 </h5>
                             </div>
                             <img  src="assets/svg/4.svg" >
                         </div>
-        
-                        <div class="card row">
+                        <div class="cardProjetos row">
                             <div>
-                                <img  src="assets/png/one.png" class="logoMarca">
+                                <img  src="assets/png/one.png" class="imgCard">
                                 <h5>
                                     Prototipagem feita em ambiente de trabalho.
                                 </h5>
                             </div>
                             <img  src="assets/svg/5.svg" >
                         </div>
-                        <div class="card row">
+                        <div class="cardProjetos row">
                             <div>
-                                <img  src="assets/svg/cb.svg" class="logoMarca">
+                                <img  src="assets/svg/cb.svg" class="imgCard">
                                 <h5>
                                     Prototipagem feita em ambiente de trabalho.
                                 </h5>
@@ -129,12 +105,56 @@
                             <img  src="assets/svg/6.svg" >               
                         </div>
                     </div>
-                    <span class="arrow" id="rigthArrow" onclick="currentDiv(2)"><img src="assets/svg/arrow.svg"></span>
+                    <span class="arrow" id="rigthArrow" onclick="currentDiv(1)"><img src="assets/svg/arrow.svg"></span>
+                </div>
+            </div>
+
+            <img src="assets/svg/circle/1.svg" class="circleLeft">
+            
+            <div id="servicos" class="column">
+                <h1>Serviços</h1>
+                <div class="Carousel" >
+                    <div class="cardServicos row">
+                        <div>
+                            <h4>Criação de sites</h4>
+                            <h5>Desenvolvimento de sites profissionais, sistemas web, blogs e lojas virtuais.</h5>
+                        </div>
+                            <img src="assets/svg/computer.svg" class="imgCard">
+                    </div>
+                    <div class="cardServicos">
+                        
+                    </div>
                 </div>
 
+
+                <div class="Carousel" >
+                    <div class="cardServicos">
+
+                    </div>
+                    <div class="cardServicos">
+                        
+                    </div>
+                </div>
             </div>
+
+            <img src="assets/svg/circle/3.svg" class="circleRight top" >
+
+
+
         </section>
     </body>
+    <script>
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+                textoArray.forEach((letra, i) => {
+                    setTimeout(() => elemento.innerHTML += letra, 75 * i);
+                });
+        }
+
+        const titulo = document.querySelector('#text');
+        typeWriter(titulo);
+    </script>
     <script>
         var slideIndex = 1;
         showDivs(slideIndex);
@@ -150,12 +170,12 @@
             var l = document.querySelector("#leftArrow");
             var r = document.querySelector("#rigthArrow");
 
-            var x = document.getElementsByClassName("card");
+            var x = document.getElementsByClassName("cardProjetos");
             
-            if (n >= x.length) {
+            if (n >= 3) {
                 slideIndex = 3;
                 r.style.opacity = ".2";   
-            } else if (n < 1) {
+            } else if (n <= 1) {
                 slideIndex = 1
                 l.style.opacity = ".2";   
             } else {
