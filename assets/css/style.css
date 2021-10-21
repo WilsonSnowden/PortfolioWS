@@ -6,6 +6,8 @@
     font-family: "Delius", cursive;
     transition: .5s ease-in;
     color: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+
 }
 
 
