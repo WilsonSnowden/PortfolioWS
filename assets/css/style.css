@@ -290,29 +290,33 @@ section h1, h2, h3, h4, h5{
 .circleLeft, .circleRight{
     position: absolute;
     height: 35vh;
-    transform: translateY(-10vh);
+    transform: translateY(-10vh) translateX(-5vw);
 }
 
 .circleRight{
-    margin-left: 85vw;
+    margin-left: 82vw;
     height: 30vh;
-
     animation: none;    
     transform: translateY(-20vh) !important;
     
 }
 
 .top{
-    margin-left: 85vw;
-    transform: translateY(-70vh) !important;
+    position: absolute;
+    height: 30vh;
     animation: circle 6s infinite alternate;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
 }
 
 @keyframes circle {
     from {
-      transform: translateY(-70vh);
+      transform: translateY(-70vh) translateX(82vw);
+
     }
     to {
-      transform: translateY(-65vh);
+      transform: translateY(-65vh) translateX(82vw);
     }
 }
