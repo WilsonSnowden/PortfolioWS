@@ -305,7 +305,7 @@ section h1, h2, h3, h4, h5{
 .top{
     margin-left: 85vw;
     transform: translateY(-70vh) !important;
-    animation: circle 8s infinite alternate;
+    animation: circle 6s infinite alternate;
 }
 
 @keyframes circle {
