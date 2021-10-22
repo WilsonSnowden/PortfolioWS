@@ -16,7 +16,19 @@
         <link rel="shortcut icon" href="assets/svg/icon.svg" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
+    <script>
+        $(document).ready(function() {
+            $(".nameSkill").css('display', 'none');
 
+            $('.cardSkill').hover( function() {
+                $(".nameSkill").css('display', 'flex');
+            }, function(){
+                    $(".nameSkill").css('display', 'none');
+                }
+            );
+        });
+
+    </script>
     <body>
       
         <header>
@@ -25,7 +37,7 @@
                 <a href="#quemSou">Quem sou</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#servicos">Serviços</a>
-                <a>Conhecimento</a>
+                <a href="#conhecimento">Conhecimento</a>
             </div>
         </header>
         <section id="banner">
@@ -39,7 +51,7 @@
         <section>
 
             <div id="quemSou" class="row">
-                <div>
+                <div id="paddingLeft">
                     <h1>Quem sou</h1>
                     <img src="assets/png/icon2.png" id="logo">
                 </div>
@@ -65,7 +77,7 @@
             <div id="projetos"  >
                 <h1>Projetos</h1>
                 <div class="Carousel">
-                    <span class="arrow left" id="leftArrow" onclick="currentDiv(-1)"><img src="assets/svg/arrow.svg"></span>
+                    <span class="arrow left" id="leftArrow" onclick="currentProject(-1)"><img src="assets/svg/arrow.svg"></span>
                     <div class="row" id="cardCarousel">
                         <div class="cardProjetos row">
                             <div>
@@ -86,6 +98,7 @@
                             </div>
                             <img  src="assets/svg/4.svg" >
                         </div>
+
                         <div class="cardProjetos row">
                             <div>
                                 <img  src="assets/png/one.png" class="imgCard">
@@ -95,6 +108,7 @@
                             </div>
                             <img  src="assets/svg/5.svg" >
                         </div>
+
                         <div class="cardProjetos row">
                             <div>
                                 <img  src="assets/svg/cb.svg" class="imgCard">
@@ -105,7 +119,7 @@
                             <img  src="assets/svg/6.svg" >               
                         </div>
                     </div>
-                    <span class="arrow" id="rigthArrow" onclick="currentDiv(1)"><img src="assets/svg/arrow.svg"></span>
+                    <span class="arrow" id="rigthArrow" onclick="currentProject(1)"><img src="assets/svg/arrow.svg"></span>
                 </div>
             </div>
 
@@ -151,7 +165,106 @@
 
             <img src="assets/svg/circle/3.svg" class=" top" >
 
+            <div id="conhecimento" class="row">
+                <div>
+                    <h1>Conhecimentos</h1>
+                    <h5>Aqui deixo com você um pouco do meu conhecimento adquirido 
+                        em torno de 3 anos no ramo da programação.</h5>
+                </div>
+           
+                <div id="carouselSkill">
+                    <span class="arrow left" id="leftArrowSkill" onclick="currentSkill(-1)"><img src="assets/svg/arrow.svg"></span>
+                
+                    <div id="gridSkill">
+                        <div class="showSkill">
+                            <div class="column">
+                                <!-- <div class="nameSkill">Invision</div> -->
+                                <div class="cardSkill">
+                                    <img src="assets/svg/logos/invision.svg"> 
+                                </div>
+                            </div>
+                            
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/adobe.svg"> 
+                            </div>
+                        </div>
 
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/figma.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/sass.svg"> 
+                            </div>
+                        </div>
+
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/html.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/css.svg"> 
+                            </div>
+                        </div>
+
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/git.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/next.svg"> 
+                            </div> 
+                        </div>
+
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/ionic.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/laravel.svg"> 
+                            </div>
+                        </div>
+                        
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/flutter.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/wordpress.svg"> 
+                            </div>
+                        </div>
+
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/angular.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/java.svg"> 
+                            </div>
+                        </div>
+
+                        <div class="showSkill">
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/js.svg"> 
+                            </div>
+        
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/ts.svg"> 
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    <span class="arrow " id="rigthArrowSkill" onclick="currentSkill(1)"><img src="assets/svg/arrow.svg"></span>
+                </div>
+            </div>
 
         </section>
     </body>
@@ -169,25 +282,22 @@
     </script>
     <script>
         var slideIndex = 1;
-        showDivs(slideIndex);
+        showProject(slideIndex);
 
-       
-
-        function currentDiv(n) {
-            showDivs(slideIndex += n);
+        function currentProject(count) {
+            showProject(slideIndex += count);
         }
         
-        function showDivs(n) {
+        function showProject(count) {
             var i;
             var l = document.querySelector("#leftArrow");
             var r = document.querySelector("#rigthArrow");
-
             var x = document.getElementsByClassName("cardProjetos");
             
-            if (n >= 3) {
+            if (count >= 3) {
                 slideIndex = 3;
                 r.style.opacity = ".2";   
-            } else if (n <= 1) {
+            } else if (count <= 1) {
                 slideIndex = 1
                 l.style.opacity = ".2";   
             } else {
@@ -195,13 +305,55 @@
                 r.style.opacity = "1";   
 
             }
-
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";  
             }
-
             x[slideIndex].style.display = "flex";  
             x[slideIndex-1].style.display = "flex";  
+            
+        }
+    </script>
+    <script>
+        var skillIndex = 1;
+        showSkill(skillIndex);
+
+        function currentSkill(count) {
+            if(skillIndex == 1){
+                showSkill(skillIndex += count);
+                
+            } else if(count == -1 && skillIndex >= 5){
+                showSkill(skillIndex += count - 1);
+            } else if(count == -1){
+                showSkill(skillIndex += count);
+            } else{
+                skillIndex += count;
+                showSkill(skillIndex - 1);
+            }
+        }
+        function showSkill(count) {
+            var i;
+            var l = document.querySelector("#leftArrowSkill");
+            var r = document.querySelector("#rigthArrowSkill");
+            var x = document.getElementsByClassName("showSkill");
+            
+            if (count >= x.length - 4) {
+                skillIndex = 5;
+                r.style.opacity = ".2";   
+            } else if (count <= 1) {
+                skillIndex = 1
+                l.style.opacity = ".2";   
+            } else {
+                l.style.opacity = "1";   
+                r.style.opacity = "1";   
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[skillIndex].style.display = "flex"; 
+            x[skillIndex+1].style.display = "flex";  
+            x[skillIndex-1].style.display = "flex";  
+            x[skillIndex+2].style.display = "flex";  
+
 
         }
     </script>

@@ -127,7 +127,7 @@ section h1, h2, h3, h4, h5{
 
 }
 
-#quemSou, #projetos, #servicos{
+#quemSou, #projetos, #servicos, #conhecimento{
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -149,12 +149,18 @@ section h1, h2, h3, h4, h5{
     }
 }
 
-#quemSou h5, #projetos h5, #servicos h5{
+#quemSou h5, #projetos h5, #servicos h5, #conhecimento h5{
     opacity: .7;
     margin-left: 10vw;
     font-weight: 500;
     font-size: 1.05em;
     max-width: 40vw ;
+}
+
+#conhecimento h5{
+    margin-left: 0;
+    max-width: 24vw ;
+
 }
 
 #quemSou h1, #servicos h1{
@@ -178,13 +184,31 @@ section h1, h2, h3, h4, h5{
     }
 }
 
-#projetos{
-    padding:0 !important;
+#projetos, #conhecimento{
+    padding: 0 !important;
     background-color: #131219;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+#conhecimento{
+
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 9vw !important;
+    padding-left: 11.5vw !important;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+
+}
+
+#paddingLeft{
+    padding-left: 3.5vw !important;
+
+}
+
 
 .cardProjetos, .cardServicos{
     height: 30vh;
@@ -323,3 +347,60 @@ section h1, h2, h3, h4, h5{
       transform: translateY(-65vh) translateX(86vw);
     }
 }
+
+#gridSkill{
+    display: flex;
+    max-width: 40vw;
+    justify-content: space-evenly;
+}
+.cardSkill{
+    height: 17vh;
+    width: 17vh;
+    background-color: #17161D;
+    border-radius: 2.5vh;
+    margin-top: 2vh;
+    margin-left: .5vw;
+    margin-right: .5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.cardSkill:hover{
+    border: solid 1.5px #39374e;
+    transition: none;
+    flex: none;
+}
+
+.nameSkill{
+    display: flex;
+    background-color: #17161D;
+    width: 17vh;
+    padding: .5vh;
+    border-radius: 1.2vh;
+    align-items: center;
+    justify-content: center;
+    color: #39374e;
+    font-weight: 600;
+}
+
+.cardSkill img{
+    height: 12vh;
+    object-fit: contain;
+}
+
+.showSkill{
+    display: none;
+    flex-direction: column;
+}
+
+#carouselSkill{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* .nameSkill{
+   
+    /* text-transform: uppercase; */
