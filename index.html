@@ -9,10 +9,13 @@
         <meta name="copyright" content="WS 2021">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#17161D">
+        <!-- <meta http-equiv="refresh" content="30"> -->
 
         <title>Wilson Junior - Developer Front-end Jr & UI Designer</title> 
 
         <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <link rel="shortcut icon" href="assets/svg/icon.svg" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
@@ -29,11 +32,53 @@
         });
 
     </script>
+
     <body>
-      
-        <header>
-            <a href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a>
-            <div id="links">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+           AOS.init();
+        </script>
+        <header class="mobile web" >
+            <div id="openMenuLegend"class="row" onclick="openMenu()">
+                <img src="assets/svg/menu.svg">
+                <h1>Menu</h1>
+            </div>
+            <div id="menuShow" class="column">
+                <div class="row">
+                    <img src="assets/svg/sun.svg" id="sun">
+                    <h1>Wilson Junior</h1>
+                    <img src="assets/svg/arrow.svg" id="arrowClose" onclick="closeMenu()">
+                </div>
+                <div class="row" id="linksMobile">
+                    <div class="column">
+                        <h3>
+                            Quem sou
+                        </h3>
+                        <h3>
+                            
+                            Projetos
+                        </h3>
+                    </div>
+                    <div class="column">
+                       <h3>
+                            
+                            Serviços
+                       </h3>
+                        <h3>
+                            
+                            Conhecimentos
+                        </h3>
+                    </div>
+                </div>
+                <div id="contact">
+                        <a href="https://www.linkedin.com/in/wilson-d-73761b203/" target="_Blank"><img src="assets/svg/logos/linkedin.svg" class="imgContact"></a>
+                        <a href="mailto:wilson15548@gmail.com" target="_Blank"><img src="assets/svg/logos/gmail.svg" class="imgContact"></a>
+                        <a href="https://api.whatsapp.com/send?phone=5511996123342" target="_Blank"><img src="assets/svg/logos/whatsapp.svg" class="imgContact"></a>
+                </div>
+                <h5>© 2021 Copyright: <b>Wilson Junior</b></h5>
+            </div>
+            <!-- <a href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a> -->
+            <div id="links" >
                 <a href="#quemSou">Quem sou</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#servicos">Serviços</a>
@@ -46,8 +91,9 @@
                 <h1>Wilson Junior</h1>
                 <h3 id="text">Developer Front-end Jr e UI Designer.</h3>
             </div>
-            <img src="assets/svg/undraw_programming_2svr.svg">
+            <img data-aos="fade-left" data-aos-duration="3000" src="assets/svg/undraw_programming_2svr.svg">
         </section>
+
         <section id="bodyPortfolio">
 
             <div id="quemSou" class="row">
@@ -284,11 +330,7 @@
 
             </footer>        
         </section>
-        <div id="mobileContruction">
-            <img src="assets/svg/logos/attention.svg">
-
-            <h1>Responvididade em construção</h1>
-        </div>
+        
     </body>
     <script>
         function typeWriter(elemento) {
@@ -403,5 +445,26 @@
 
 
         }
+        function openMenu(){
+            $("header").css('animation', 'headerOpen 1.5s forwards');
+            $('#openMenuLegend').css('display', 'none');
+            setTimeout(function () {
+                $("#legend").css('display', 'flex');
+                $("#menuShow").css('display', 'flex');
+
+            }, 1000);
+        }
+
+        function closeMenu(){
+            $("header").css('animation', 'headerClose 1.5s forwards');     
+            $("#menuShow").css('display', 'none');
+            setTimeout(function () {
+                $('#openMenuLegend').css('display', 'flex');
+            }, 1000);
+            
+        }
+    
     </script>
+
+    
 </html>
