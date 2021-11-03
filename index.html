@@ -446,21 +446,21 @@
 
         }
         function openMenu(){
-            $("header").css('animation', 'headerOpen 1.5s forwards');
+            $("header").css('animation', 'headerOpen .7s forwards');
             $('#openMenuLegend').css('display', 'none');
             setTimeout(function () {
                 $("#legend").css('display', 'flex');
                 $("#menuShow").css('display', 'flex');
 
-            }, 1000);
+            }, 700);
         }
 
         function closeMenu(){
-            $("header").css('animation', 'headerClose 1.5s forwards');     
+            $("header").css('animation', 'headerClose .7s forwards');     
             $("#menuShow").css('display', 'none');
             setTimeout(function () {
                 $('#openMenuLegend').css('display', 'flex');
-            }, 1000);
+            }, 700);
             
         }
     

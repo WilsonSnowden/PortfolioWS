@@ -544,6 +544,8 @@ html {
         opacity: .5;
         font-size: .8em;
         font-weight: 400;
+        margin-bottom: 0;
+        bottom: 0;
     }
 
     h5 b{
@@ -599,7 +601,7 @@ html {
         }
           100% {
             width: 95%;
-            height: 37vh;
+            height: 35vh;
             bottom: 10px;
         }
     }
@@ -607,7 +609,7 @@ html {
     @keyframes headerClose {
         0%{
             width: 95%;
-            height: 37vh;
+            height: 35vh;
             bottom: 10px;
         }
         100%{
