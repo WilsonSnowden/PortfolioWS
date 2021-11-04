@@ -486,6 +486,7 @@ html {
         justify-content: space-around;
         align-items: center;
     }
+
     #icon,  #links, .web{
         display: none;
     }
@@ -516,7 +517,6 @@ html {
        
     }
 
-
     #menuShow{
         display: none;
         justify-content: space-around;
@@ -533,7 +533,7 @@ html {
 
     }
 
-    h1, h2, h3, h5{
+    h1, h2, h3, h4, h5{
         color: rgb(241, 240, 255);
         text-align: center;
         font-size: 1.7em;
@@ -598,8 +598,6 @@ html {
         height: 3.5vh;
     }
 
-
-
     @keyframes headerOpen {
         0%{
             width: 37vw;
@@ -620,12 +618,11 @@ html {
             width: 37vw;
             height: 5vh;
         }
-  }
+    }
 
     #legend{
         display: none;
     }
-
 
     #banner{
         display: flex;
@@ -652,12 +649,11 @@ html {
     #banner h1{
         font-weight: 600;
         font-size: 1.8em;
-    
     }
 
     #logoMobile{
         height: 15vh;
-        animation: upImg 3.5s infinite alternate;
+        animation: upImg 2.5s infinite alternate;
     }
 
     #bodyPortfolio{
@@ -667,7 +663,7 @@ html {
 
     }
 
-    #quemSou{
+    #quemSou, #conhecimento{
         display: flex !important;
         margin: 0 auto !important;
         width: 90%;
@@ -681,7 +677,7 @@ html {
 
     @keyframes upImg {
         from {
-          transform: translateY(5);
+          transform: translateY(10px);
         }
         to {
           transform: translateY(-15px);
@@ -692,42 +688,57 @@ html {
         margin-left: 77vw;
         height: 30vh;
         animation: none;    
-        transform: translateY(-75vh) !important;
+        transform: translateY(-70vh) !important;
         position: absolute;
     }
     
-    #projetos{
+    #projetos, #servicos, #conhecimento{
         background-color: #131219;
         min-height: 40vh;
+        width: 100%;
         padding: 2vh 0;
     }
 
-    #cardCarousel{
+    #servicos{
+        background-color: #17161D;
+    }
+
+    #cardCarousel, .Carousel, #carouselSkill{
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .cardProjetos{
+    .cardProjetos, .cardServicos{
         display: flex !important;
         width: 80%;
         background-color: #17161D;
         margin-bottom: 2vh;
         padding: 1.5vh;
         border-radius: 1vh;
+        align-items: flex-end;
+    }
 
-        /* border: #39374e solid 1px; */
+    .cardServicos{
+        background-color: #131219;
+        margin: 1vh auto;
     }
 
     .imgProject{
+        margin: 0 auto;
         height: 15vh;
     }
 
     .imgCard{
-        height: 3.5vh !important;
+        height: 3.5vh;
     }
 
-    .cardProjetos h5{
+    .cardServicos img{
+        margin: 0 auto;
+        height: 10vh;
+    }
+
+    .cardProjetos h5, .cardServicos h5{
         max-width: 45vw;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -743,5 +754,27 @@ html {
         flex-direction: column;        
     }
     
+    .cardServicos h4{
+        text-align: left;
+        font-size: 1.1em;
+    }
 
+    .showSkill{
+        width: 90%;
+        display: flex !important;
+        margin: 0 auto;
+    }
+
+    .cardSkill{
+        background-color: #17161D;
+        padding: 1vh;
+        border-radius: 1vh;
+        margin: 1vh auto;
+    }
+
+    .showSkill img{
+        width: 25vw;
+        height: 25vw;
+        object-fit: contain;
+    }
 }

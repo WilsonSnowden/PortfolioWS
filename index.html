@@ -47,28 +47,26 @@
             </div>
             <div id="menuShow" class="column">
                 <div class="row">
-                    <img src="assets/svg/sun.svg" id="sun">
+                    <!-- <img src="assets/svg/sun.svg" id="sun"> -->
                     <h1>Wilson Junior</h1>
                     <img src="assets/svg/arrow.svg" id="arrowClose" onclick="closeMenu()">
                 </div>
                 <div class="row" id="linksMobile">
                     <div class="column">
                         <h3>
-                            Quem sou
+                            <a href="#quemSou" onclick="closeMenu()">Quem sou</a>
+
                         </h3>
                         <h3>
-                            
-                            Projetos
+                            <a href="#servicos" onclick="closeMenu()">Serviços</a>
                         </h3>
                     </div>
                     <div class="column">
                        <h3>
-                            
-                            Serviços
-                       </h3>
+                            <a href="#projetos" onclick="closeMenu()">Projetos</a>
+                        </h3>
                         <h3>
-                            
-                            Conhecimentos
+                            <a href="#conhecimento" onclick="closeMenu()">Conhecimento</a>
                         </h3>
                     </div>
                 </div>
@@ -113,7 +111,7 @@
                     </h5>
                     <h5>    
                         Iniciei minha carreira na programação em 2018, no mercado de trabalho entrei em Abr/2019 
-                        como <i>Jovem Aprendiz de Programação</i>, quando chegou em Jan/2020 a empresa me efetivou
+                        como <i>Jovem Aprendiz de Programação</i>, chegando em Jan/2020 a empresa me efetivou
                         fazendo com que eu exercesse o cargo de <i>Analista de Desenvolvimento e Criação</i>, onde fiquei
                         reponsável pelo Desenvolvimento Front-End dos softwares e pela criação das prototipagem. Desde
                         então venho sempre aprimorando minhas habilidades.
@@ -122,9 +120,9 @@
                 </div>
             </div>
         
-            <img src="assets/svg/circle/2.svg" class="circleRight">
+            <img src="assets/svg/circle/2.svg" class="circleRight web">
         
-            <div  id="projetos"  >
+            <div id="projetos">
                 <h1>Projetos</h1>
                 <div class="Carousel">
                     <span class="arrow left web" id="leftArrow" onclick="currentProject(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrow"></span>
@@ -173,11 +171,11 @@
                 </div>
             </div>
         
-            <img class="web"  src="assets/svg/circle/1.svg" class="circleLeft">
+            <img  src="assets/svg/circle/1.svg" class="circleLeft web">
             
-            <div  class="web"  id="servicos" class="column">
+            <div id="servicos" class="column">
                 <h1>Serviços</h1>
-                <div class="Carousel" >
+                <div class="Carousel">
                     <div class="cardServicos row">
                         <div>
                             <h4>Criação de sites</h4>
@@ -188,7 +186,7 @@
                     <div class="cardServicos row">
                         <div>
                             <h4>Criação de Aplicativos</h4>
-                            <h5>Desenvolvimento de aplicativos profissionais, e-commerce, esportivo e noticiário.</h5>
+                            <h5>Desenvolvimento de aplicativos profissionais esportivo, noticiário entre outros.</h5>
                         </div>
                             <img src="assets/svg/mobile.svg" class="imgCard">
                     </div>
@@ -213,28 +211,24 @@
                 </div>
             </div>
         
-            <img class="web"  src="assets/svg/circle/3.svg" class=" top" >
+            <img src="assets/svg/circle/3.svg" class=" top web" >
         
-            <div class="web"  id="conhecimento" class="row">
+            <div id="conhecimento" class="row">
                 <div>
                     <h1>Conhecimentos</h1>
-                    <h5>Aqui deixo com você um pouco do meu conhecimento adquirido 
+                    <h5 class="web">Aqui deixo com você um pouco do meu conhecimento adquirido 
                         em torno de 3 anos no ramo da programação.</h5>
                 </div>
            
                 <div id="carouselSkill">
-                    <span class="arrow left" id="leftArrowSkill" onclick="currentSkill(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrowSkill"></span>
+                    <span class="arrow left web" id="leftArrowSkill" onclick="currentSkill(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrowSkill"></span>
                 
                     <div id="gridSkill">
                         <div class="showSkill">
-                            <div class="column">
-                                <!-- <div class="nameSkill">Invision</div> -->
-                                <div class="cardSkill">
-                                    <img src="assets/svg/logos/invision.svg"> 
-                                </div>
+                            <div class="cardSkill">
+                                <img src="assets/svg/logos/invision.svg"> 
                             </div>
-                            
-        
+                                  
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/adobe.svg"> 
                             </div>
@@ -312,7 +306,7 @@
                     
                     </div>
                     
-                    <span class="arrow " id="rigthArrowSkill" onclick="currentSkill(1)"><img src="assets/svg/arrow.svg" id="imgRightArrowSkill"></span>
+                    <span class="arrow web " id="rigthArrowSkill" onclick="currentSkill(1)"><img src="assets/svg/arrow.svg" id="imgRightArrowSkill"></span>
                 </div>
             </div>
         
@@ -409,6 +403,7 @@
                 showSkill(skillIndex - 1);
             }
         }
+
         function showSkill(count) {
             var i;
             var l = document.querySelector("#leftArrowSkill");
@@ -449,22 +444,23 @@
 
 
         }
+        
         function openMenu(){
-            $("header").css('animation', 'headerOpen .7s forwards');
+            $("header").css('animation', 'headerOpen .4s forwards');
             $('#openMenuLegend').css('display', 'none');
             setTimeout(function () {
                 $("#legend").css('display', 'flex');
                 $("#menuShow").css('display', 'flex');
 
-            }, 700);
+            }, 400);
         }
 
         function closeMenu(){
-            $("header").css('animation', 'headerClose .7s forwards');     
+            $("header").css('animation', 'headerClose .4s forwards');     
             $("#menuShow").css('display', 'none');
             setTimeout(function () {
                 $('#openMenuLegend').css('display', 'flex');
-            }, 700);
+            }, 400);
             
         }
     
