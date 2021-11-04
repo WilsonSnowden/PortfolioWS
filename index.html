@@ -29,6 +29,7 @@
                     $(".nameSkill").css('display', 'none');
                 }
             );
+
         });
 
     </script>
@@ -38,7 +39,7 @@
         <script>
            AOS.init();
         </script>
-        <header class="mobile web" >
+        <header  >
             <div id="openMenuLegend"class="row" onclick="openMenu()">
                 <img src="assets/svg/menu.svg">
                 <h1>Menu</h1>
@@ -77,7 +78,7 @@
                 </div>
                 <h5>© 2021 Copyright: <b>Wilson Junior</b></h5>
             </div>
-            <!-- <a href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a> -->
+            <a class="web" href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a>
             <div id="links" >
                 <a href="#quemSou">Quem sou</a>
                 <a href="#projetos">Projetos</a>
@@ -86,16 +87,17 @@
             </div>
         </header>
         <section id="banner">
-            <div >
+            <div class="column">
+                <img class="mobile" id="logoMobile" src="assets/png/icon2.png" >
                 <h3>Olá, eu sou o</h3>
                 <h1>Wilson Junior</h1>
                 <h3 id="text">Developer Front-end Jr e UI Designer.</h3>
             </div>
-            <img data-aos="fade-left" data-aos-duration="3000" src="assets/svg/undraw_programming_2svr.svg">
+            <img class="web" data-aos="fade-left" data-aos-duration="3000" src="assets/svg/undraw_programming_2svr.svg">
         </section>
-
+        
         <section id="bodyPortfolio">
-
+        
             <div id="quemSou" class="row">
                 <div id="paddingLeft">
                     <h1>Quem sou</h1>
@@ -117,9 +119,9 @@
                     </h5>
                 </div>
             </div>
-
+        
             <img src="assets/svg/circle/2.svg" class="circleRight">
-
+        
             <div id="projetos"  >
                 <h1>Projetos</h1>
                 <div class="Carousel">
@@ -144,7 +146,7 @@
                             </div>
                             <img  src="assets/svg/4.svg" >
                         </div>
-
+        
                         <div class="cardProjetos row">
                             <div>
                                 <img  src="assets/png/one.png" class="imgCard">
@@ -154,7 +156,7 @@
                             </div>
                             <img  src="assets/svg/5.svg" >
                         </div>
-
+        
                         <div class="cardProjetos row">
                             <div>
                                 <img  src="assets/svg/cb.svg" class="imgCard">
@@ -168,7 +170,7 @@
                     <span class="arrow" id="rigthArrow" onclick="currentProject(1)"><img src="assets/svg/arrow.svg" id="imgRigthArrow"></span>
                 </div>
             </div>
-
+        
             <img src="assets/svg/circle/1.svg" class="circleLeft">
             
             <div id="servicos" class="column">
@@ -189,8 +191,8 @@
                             <img src="assets/svg/mobile.svg" class="imgCard">
                     </div>
                 </div>
-
-
+        
+        
                 <div class="Carousel" >
                     <div class="cardServicos">
                         <div>
@@ -208,9 +210,9 @@
                     </div>
                 </div>
             </div>
-
+        
             <img src="assets/svg/circle/3.svg" class=" top" >
-
+        
             <div id="conhecimento" class="row">
                 <div>
                     <h1>Conhecimentos</h1>
@@ -235,7 +237,7 @@
                                 <img src="assets/svg/logos/adobe.svg"> 
                             </div>
                         </div>
-
+        
                         <div class="showSkill">
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/figma.svg"> 
@@ -245,7 +247,7 @@
                                 <img src="assets/svg/logos/sass.svg"> 
                             </div>
                         </div>
-
+        
                         <div class="showSkill">
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/html.svg"> 
@@ -255,7 +257,7 @@
                                 <img src="assets/svg/logos/css.svg"> 
                             </div>
                         </div>
-
+        
                         <div class="showSkill">
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/git.svg"> 
@@ -265,7 +267,7 @@
                                 <img src="assets/svg/logos/next.svg"> 
                             </div> 
                         </div>
-
+        
                         <div class="showSkill">
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/ionic.svg"> 
@@ -285,7 +287,7 @@
                                 <img src="assets/svg/logos/wordpress.svg"> 
                             </div>
                         </div>
-
+        
                         <div class="showSkill">
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/angular.svg"> 
@@ -295,7 +297,7 @@
                                 <img src="assets/svg/logos/java.svg"> 
                             </div>
                         </div>
-
+        
                         <div class="showSkill">
                             <div class="cardSkill">
                                 <img src="assets/svg/logos/js.svg"> 
@@ -311,7 +313,7 @@
                     <span class="arrow " id="rigthArrowSkill" onclick="currentSkill(1)"><img src="assets/svg/arrow.svg" id="imgRightArrowSkill"></span>
                 </div>
             </div>
-
+        
             <footer>
             
                 <div class="row" id="contentFooter">
@@ -327,7 +329,7 @@
                     <h5>© 2021 Copyright: <b>Wilson Junior</b></h5>
                 </div>
                 <img src="assets/svg/footer.svg" id="imgFooter">
-
+        
             </footer>        
         </section>
         
