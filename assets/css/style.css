@@ -14,9 +14,9 @@ body{
     margin: 0;
     width: 100%;
     background-color: #17161D;
-
     overflow-x: hidden;
 }
+
 html {
     scroll-behavior:smooth;
 
@@ -471,18 +471,22 @@ html {
 }
 
 @media(max-width: 1090px){
-    html {
+
+    html{
+        overflow-x: hidden;
         height: 100%;
     }
-    
+
     body {
-        min-height: 100%;
+        
+        width: 100%;
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
-
+        align-items: center;
     }
-    #bodyPortfolio, #icon,  #links, .web{
+    #icon,  #links, .web{
         display: none;
     }
 
@@ -499,19 +503,19 @@ html {
     }
 
     header{
+        z-index: 2;
         display: flex;
-        background: linear-gradient(135deg, #6c63ff 0%, rgba(57,55,78,1) 100%);;
+        background: linear-gradient(135deg, #6c63ff 0%, rgba(57,55,78,1) 100%);
         position: fixed;
         border-radius: 3vh;
         box-shadow:0px -3px 15px 1px rgba(241, 240, 255,0.1);
         width: 37vw;
         height: 5vh;
         bottom: 2vh;
-        /* width: 95%;
-        height: 40vh;
-        bottom: 10px; */
         justify-content: space-around; 
+       
     }
+
 
     #menuShow{
         display: none;
@@ -547,8 +551,7 @@ html {
         opacity: .5;
         font-size: .8em;
         font-weight: 400;
-        margin-bottom: 0;
-        bottom: 0;
+
     }
 
     h5 b{
@@ -577,6 +580,7 @@ html {
         height: 3vh;
 
     }
+    
     #menuShow  img{
         filter: invert(93%) sepia(33%) saturate(2565%) hue-rotate(180deg) brightness(106%) contrast(106%);
         height: 3vh;
@@ -600,12 +604,10 @@ html {
         0%{
             width: 37vw;
             height: 5vh;
-            bottom: 2vh;
         }
           100% {
             width: 95%;
             height: 35vh;
-            bottom: 10px;
         }
     }
 
@@ -613,12 +615,10 @@ html {
         0%{
             width: 95%;
             height: 35vh;
-            bottom: 10px;
         }
         100%{
             width: 37vw;
             height: 5vh;
-            bottom: 2vh;
         }
   }
 
@@ -638,7 +638,7 @@ html {
         flex-direction: column;
     }
 
-    #banner h1, h3{
+    #banner h1, #banner h3{
         margin: 0;
         margin-top: .5vh;
         margin-left: 5vw;
@@ -657,18 +657,91 @@ html {
 
     #logoMobile{
         height: 15vh;
-        animation: upImg 5s infinite alternate;
+        animation: upImg 3.5s infinite alternate;
+    }
+
+    #bodyPortfolio{
+        background-color: #17161D;
+        height: auto;
+        width: 100%;
+
+    }
+
+    #quemSou{
+        display: flex !important;
+        margin: 0 auto !important;
+        width: 90%;
+        height: auto;
+        font-size: 1.1em;
+        margin-bottom: 5vh;
+        align-items: center !important;
+        flex-direction: column !important;
+
     }
 
     @keyframes upImg {
         from {
-          transform: translateY(0);
+          transform: translateY(5);
         }
         to {
           transform: translateY(-15px);
         }
     }
 
+    .circleRight{
+        margin-left: 77vw;
+        height: 30vh;
+        animation: none;    
+        transform: translateY(-75vh) !important;
+        position: absolute;
+    }
+    
+    #projetos{
+        background-color: #131219;
+        min-height: 40vh;
+        padding: 2vh 0;
+    }
+
+    #cardCarousel{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cardProjetos{
+        display: flex !important;
+        width: 80%;
+        background-color: #17161D;
+        margin-bottom: 2vh;
+        padding: 1.5vh;
+        border-radius: 1vh;
+
+        /* border: #39374e solid 1px; */
+    }
+
+    .imgProject{
+        height: 15vh;
+    }
+
+    .imgCard{
+        height: 3.5vh !important;
+    }
+
+    .cardProjetos h5{
+        max-width: 45vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .columnMobile{
+        display: flex;
+        flex-direction: column;        
+    }
     
 
 }
