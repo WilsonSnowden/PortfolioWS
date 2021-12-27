@@ -10,6 +10,10 @@
 
 }
 
+*:focus{
+    border: none;
+}
+
 body{
     margin: 0;
     width: 100%;

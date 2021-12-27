@@ -166,6 +166,26 @@
                             </div>               
                             <img  src="assets/svg/6.svg" class="imgProject">               
                         </div>
+
+                        <div class="cardProjetos row web">
+                            <div>
+                                <img  src="assets/png/Monitorando2.png" class="imgCard">
+                                <h5>
+                                    Sistema de controle estudantil para organização de Monitorias.
+                                </h5>
+                            </div>               
+                            <img  src="assets/png/7.png" class="imgProject">               
+                        </div>
+
+                        <div class="cardProjetos row web">
+                            <div>
+                                <h4>****</h4>
+                                <h5>
+                                    Sistema para controle de Biblioteca e aluguel de livros.
+                                </h5>
+                            </div>               
+                            <img  src="assets/png/8.png" class="imgProject">               
+                        </div>
                     </div>
                     <span class="arrow web" id="rigthArrow" onclick="currentProject(1)"><img src="assets/svg/arrow.svg" id="imgRigthArrow"></span>
                 </div>
@@ -356,8 +376,8 @@
             var r = document.querySelector("#rigthArrow");
             var x = document.getElementsByClassName("cardProjetos");
             
-            if (count >= 3) {
-                slideIndex = 3;
+            if (count >= 5) {
+                slideIndex = 5;
                 $(r).css('opacity', '.5');
                 $(r).hover(function() {
                     $("#imgRigthArrow").css('cursor', 'no-drop');
