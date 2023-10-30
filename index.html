@@ -1,490 +1,493 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="content-language" content="pt-br">
-        <meta name="author" content="Wilson Junior">
-        <meta name="description" content="Developer Front-end Pl & UI Designer">
-        <meta name="copyright" content="WS 2021">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#6c63ff">
-        <!-- <meta http-equiv="refresh" content="30"> -->
 
-        <title>Wilson Junior - Developer Front-end Pl & UI Designer</title> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="author" content="Wilson Junior">
+    <meta name="description" content="Developer Front-end Pl & UI Designer">
+    <meta name="copyright" content="WS 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c63ff">
+    <!-- <meta http-equiv="refresh" content="30"> -->
 
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Wilson Junior - Developer Front-end Pl & UI Designer</title> 
 
-        <link rel="shortcut icon" href="assets/svg/icon.svg" type="image/x-icon">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/svg/icon.svg" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        $(".nameSkill").css('display', 'none');
+
+        $('.cardSkill').hover( function() {
+            $(".nameSkill").css('display', 'flex');
+        }, function(){
+                $(".nameSkill").css('display', 'none');
+            }
+        );
+
+    });
+
+</script>
+
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".nameSkill").css('display', 'none');
-
-            $('.cardSkill').hover( function() {
-                $(".nameSkill").css('display', 'flex');
-            }, function(){
-                    $(".nameSkill").css('display', 'none');
-                }
-            );
-
-        });
-
+       AOS.init();
     </script>
 
-    <body>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-           AOS.init();
-        </script>
-
-        <header  >
-            <div id="openMenuLegend"class="row" onclick="openMenu()">
-                <img src="assets/svg/menu.svg">
-                <h1>Menu</h1>
+    <header  >
+        <div id="openMenuLegend"class="row" onclick="openMenu()">
+            <img src="assets/svg/menu.svg">
+            <h1>Menu</h1>
+        </div>
+        <div id="menuShow" class="column">
+            <div class="row">
+                <!-- <img src="assets/svg/sun.svg" id="sun"> -->
+                <h1>Wilson Junior</h1>
+                <img src="assets/svg/arrow.svg" id="arrowClose" onclick="closeMenu()">
             </div>
-            <div id="menuShow" class="column">
-                <div class="row">
-                    <!-- <img src="assets/svg/sun.svg" id="sun"> -->
-                    <h1>Wilson Junior</h1>
-                    <img src="assets/svg/arrow.svg" id="arrowClose" onclick="closeMenu()">
-                </div>
-                <div class="row" id="linksMobile">
-                    <div class="column">
-                        <h3>
-                            <a href="#quemSou" onclick="closeMenu()">Quem sou</a>
+            <div class="row" id="linksMobile">
+                <div class="column">
+                    <h3>
+                        <a href="#quemSou" onclick="closeMenu()">Quem sou</a>
 
-                        </h3>
-                        <h3>
-                            <a href="#servicos" onclick="closeMenu()">Serviços</a>
-                        </h3>
+                    </h3>
+                    <h3>
+                        <a href="#servicos" onclick="closeMenu()">Serviços</a>
+                    </h3>
+                </div>
+                <div class="column">
+                   <h3>
+                        <a href="#projetos" onclick="closeMenu()">Projetos</a>
+                    </h3>
+                    <h3>
+                        <a href="#conhecimento" onclick="closeMenu()">Conhecimento</a>
+                    </h3>
+                </div>
+            </div>
+            <div id="contact">
+                    <a href="https://www.linkedin.com/in/wilson-d-73761b203/" target="_Blank"><img src="assets/svg/logos/linkedin.svg" class="imgContact"></a>
+                    <a href="mailto:wilson15548@gmail.com" target="_Blank"><img src="assets/svg/logos/gmail.svg" class="imgContact"></a>
+                    <a href="https://api.whatsapp.com/send?phone=5511996123342" target="_Blank"><img src="assets/svg/logos/whatsapp.svg" class="imgContact"></a>
+            </div>
+            <h5>© 2021 Copyright: <b>Wilson Junior</b></h5>
+        </div>
+        <a class="web" href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a>
+        <div id="links" >
+            <a href="#quemSou">Quem sou</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#conhecimento">Conhecimento</a>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="column">
+            <img class="mobile" id="logoMobile" src="assets/png/icon2.png" >
+            <h3>Olá, eu sou o</h3>
+            <h1>Wilson Junior</h1>
+            <h3 id="text">Developer Front-end Pleno e UI Designer.</h3>
+        </div>
+        <img class="web" data-aos="fade-left" data-aos-duration="3000" src="assets/svg/undraw_programming_2svr.svg">
+    </section>
+    
+    <section id="bodyPortfolio">
+    
+        <div id="quemSou" class="row">
+            <div id="paddingLeft">
+                <h1>Quem sou</h1>
+                <img class="web"  src="assets/png/icon2.png" id="logo">
+            </div>
+            <div>
+                <h5>
+                    Meu nome é Wilson de Souza Oliveira Junior
+                    e sou um profissional da área de tecnologia com formação no <b>Instituto Federal de Ciência e Tecnologia de São Paulo</b>, 
+                    onde cursei o Técnico Integrado em Informática. Atualmente, moro na cidade de São Paulo, São Paulo, 
+                    e ocupo a posição de Desenvolvedor na Cogna uma posição que reflete meu crescimento e experiência ao longo dos anos..
+                </h5>
+                <h5>    
+                    Minha jornada na programação começou em 2017, quando decidi ingressar nesse ramo. Em abril de 2017, tive a oportunidade 
+                    de dar meus primeiros passos no mercado de trabalho como Jovem Aprendiz de Programação. Em janeiro de 2018, a empresa 
+                    decidiu me efetivar, promovendo-me ao cargo de Analista de Desenvolvimento e Criação. Nesse papel, fiquei responsável 
+                    pelo desenvolvimento do Front-End de softwares, uma tarefa que exigia o desenvolvimento de software e criação de prototipagem de alta fidelidade.
+                    Desde então, tenho continuamente buscado aprimorar minhas habilidades e conhecimentos. Minha jornada na programação tem sido uma evolução constante, 
+                    impulsionada por minha paixão por resolver problemas e criar soluções inovadoras. Estou ansioso para enfrentar novos desafios e contribuir
+                    para projetos cada vez mais complexos e impactantes na Cogna e na indústria de tecnologia como um todo.
+                    Para saber mais, <a target="_Blank" href="https://www.linkedin.com/in/wilson-d-73761b203/"><b><i>clique aqui</i></b></a>.
+                </h5>
+            </div>
+        </div>
+    
+        <img src="assets/svg/circle/2.svg" class="circleRight web">
+    
+        <div id="projetos">
+            <h1>Projetos</h1>
+            <div class="Carousel">
+                <span class="arrow left web" id="leftArrow" onclick="currentProject(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrow"></span>
+                <div class="row" id="cardCarousel">
+                    <div class="cardProjetos row">
+                        <div>
+                            <img  src="assets/png/logotipo.png" class="imgCard">
+                            <h5>
+                                Prototipagem desenvolvida para trabalho escolar. 
+                            </h5>
+                        </div>
+                        <img  src="assets/svg/3.svg" class="imgProject">               
                     </div>
-                    <div class="column">
-                       <h3>
-                            <a href="#projetos" onclick="closeMenu()">Projetos</a>
-                        </h3>
-                        <h3>
-                            <a href="#conhecimento" onclick="closeMenu()">Conhecimento</a>
-                        </h3>
+                    
+                    <div class="cardProjetos row">
+                        <div>
+                            <img  src="https://www.sirio.org.br/wp-content/uploads/esporte-clube-sirio-2.png" class="imgCard">
+                            <h5>
+                                Software e Prototipagem desenvolvido como Freelancer. 
+                            </h5>
+                        </div>
+                        <img  src="assets/svg/4.svg" class="imgProject">
+                    </div>
+    
+                    <div class="cardProjetos row ">
+                        <div>
+                            <img  src="assets/png/one.png" class="imgCard">
+                            <h5>
+                                Prototipagem feita em ambiente de trabalho.
+                            </h5>
+                        </div>
+                        <img  src="assets/svg/5.svg" class="imgProject">
+                    </div>
+    
+                    <div class="cardProjetos row web">
+                        <div>
+                            <img  src="assets/svg/cb.svg" class="imgCard">
+                            <h5>
+                                Prototipagem feita em ambiente de trabalho.
+                            </h5>
+                        </div>               
+                        <img  src="assets/svg/6.svg" class="imgProject">               
+                    </div>
+
+                    <div class="cardProjetos row web">
+                        <div>
+                            <img  src="assets/png/Monitorando2.png" class="imgCard">
+                            <h5>
+                                Sistema de controle estudantil para organização de Monitorias.
+                            </h5>
+                        </div>               
+                        <img  src="assets/png/7.png" class="imgProject">               
+                    </div>
+
+                    <div class="cardProjetos row web">
+                        <div>
+                            <h4>****</h4>
+                            <h5>
+                                Sistema para controle de Biblioteca e aluguel de livros.
+                            </h5>
+                        </div>               
+                        <img  src="assets/png/8.png" class="imgProject">               
                     </div>
                 </div>
+                <span class="arrow web" id="rigthArrow" onclick="currentProject(1)"><img src="assets/svg/arrow.svg" id="imgRigthArrow"></span>
+            </div>
+        </div>
+    
+        <img  src="assets/svg/circle/1.svg" class="circleLeft web">
+        
+        <div id="servicos" class="column">
+            <h1>Serviços</h1>
+            <div class="Carousel">
+                <div class="cardServicos row">
+                    <div>
+                        <h4>Criação de sites</h4>
+                        <h5>Desenvolvimento de sites profissionais, sistemas web, blogs e lojas virtuais.</h5>
+                    </div>
+                        <img src="assets/svg/computer.svg" class="imgCard">
+                </div>
+                <div class="cardServicos row">
+                    <div>
+                        <h4>Criação de Aplicativos</h4>
+                        <h5>Desenvolvimento de aplicativos profissionais esportivo, noticiário entre outros.</h5>
+                    </div>
+                        <img src="assets/svg/mobile.svg" class="imgCard">
+                </div>
+            </div>
+    
+    
+            <div class="Carousel" >
+                <div class="cardServicos">
+                    <div>
+                        <h4>UI Designer</h4>
+                        <h5>Desenho de layouts confortável, moderno e que se adequa ao seu negócio.</h5>
+                    </div>
+                        <img src="assets/svg/ui.svg" class="imgCard">
+                </div>
+                <div class="cardServicos">
+                    <div>
+                        <h4>Responsividade</h4>
+                        <h5>Criação de sites responsivos para maior comodidade.</h5>
+                    </div>
+                        <img src="assets/svg/responsive.svg" class="imgCard">
+                </div>
+            </div>
+        </div>
+    
+        <img src="assets/svg/circle/3.svg" class=" top web" >
+    
+        <div id="conhecimento" class="row">
+            <div>
+                <h1>Conhecimentos</h1>
+                <h5 class="web">Aqui deixo com você um pouco do meu conhecimento adquirido 
+                    em torno de 3 anos no ramo da programação.</h5>
+            </div>
+       
+            <div id="carouselSkill">
+                <span class="arrow left web" id="leftArrowSkill" onclick="currentSkill(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrowSkill"></span>
+            
+                <div id="gridSkill">
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/invision.svg"> 
+                        </div>
+                              
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/adobe.svg"> 
+                        </div>
+                    </div>
+    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/figma.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/sass.svg"> 
+                        </div>
+                    </div>
+    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/html.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/css.svg"> 
+                        </div>
+                    </div>
+    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/git.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/next.svg"> 
+                        </div> 
+                    </div>
+    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/ionic.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/laravel.svg"> 
+                        </div>
+                    </div>
+                    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/flutter.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/wordpress.svg"> 
+                        </div>
+                    </div>
+    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/angular.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/java.svg"> 
+                        </div>
+                    </div>
+    
+                    <div class="showSkill">
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/js.svg"> 
+                        </div>
+    
+                        <div class="cardSkill">
+                            <img src="assets/svg/logos/ts.svg"> 
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <span class="arrow web " id="rigthArrowSkill" onclick="currentSkill(1)"><img src="assets/svg/arrow.svg" id="imgRightArrowSkill"></span>
+            </div>
+        </div>
+    
+        <footer class="web" >
+        
+            <div class="row" id="contentFooter">
+                <img src="assets/png/icon2.png">
                 <div id="contact">
+                    <h3>Contato</h3>
+                    <div>
                         <a href="https://www.linkedin.com/in/wilson-d-73761b203/" target="_Blank"><img src="assets/svg/logos/linkedin.svg" class="imgContact"></a>
                         <a href="mailto:wilson15548@gmail.com" target="_Blank"><img src="assets/svg/logos/gmail.svg" class="imgContact"></a>
                         <a href="https://api.whatsapp.com/send?phone=5511996123342" target="_Blank"><img src="assets/svg/logos/whatsapp.svg" class="imgContact"></a>
+                    </div>
                 </div>
                 <h5>© 2021 Copyright: <b>Wilson Junior</b></h5>
             </div>
-            <a class="web" href="#banner"><img src="assets/svg/icon.svg" id="icon"> </a>
-            <div id="links" >
-                <a href="#quemSou">Quem sou</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#conhecimento">Conhecimento</a>
-            </div>
-        </header>
-
-        <section id="banner">
-            <div class="column">
-                <img class="mobile" id="logoMobile" src="assets/png/icon2.png" >
-                <h3>Olá, eu sou o</h3>
-                <h1>Wilson Junior</h1>
-                <h3 id="text">Developer Front-end Pleno e UI Designer.</h3>
-            </div>
-            <img class="web" data-aos="fade-left" data-aos-duration="3000" src="assets/svg/undraw_programming_2svr.svg">
-        </section>
-        
-        <section id="bodyPortfolio">
-        
-            <div id="quemSou" class="row">
-                <div id="paddingLeft">
-                    <h1>Quem sou</h1>
-                    <img class="web"  src="assets/png/icon2.png" id="logo">
-                </div>
-                <div>
-                    <h5>
-                        Meu nome é Wilson de Souza Oliveira Junior,
-                        formado no <b>Instituto Federal de Ciência e Tecnologia de São Paulo</b>, 
-                        cursei Técnico Integrado em Informática. Moro em São Paulo, São Paulo, atualmente sou Desenvolvedor I na Kroton.
-                    </h5>
-                    <h5>    
-                        Iniciei minha carreira na programação em 2018, no mercado de trabalho entrei em Abr/2019 
-                        como <i>Jovem Aprendiz de Programação</i>, chegando em Jan/2020 a empresa me efetivou
-                        fazendo com que eu exercesse o cargo de <i>Analista de Desenvolvimento e Criação</i>, onde fiquei
-                        reponsável pelo Desenvolvimento Front-End dos softwares e pela criação das prototipagem. Desde
-                        então venho sempre aprimorando minhas habilidades.
-                        Para saber mais, <a target="_Blank" href="https://www.linkedin.com/in/wilson-d-73761b203/"><b><i>clique aqui</i></b></a>.
-                    </h5>
-                </div>
-            </div>
-        
-            <img src="assets/svg/circle/2.svg" class="circleRight web">
-        
-            <div id="projetos">
-                <h1>Projetos</h1>
-                <div class="Carousel">
-                    <span class="arrow left web" id="leftArrow" onclick="currentProject(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrow"></span>
-                    <div class="row" id="cardCarousel">
-                        <div class="cardProjetos row">
-                            <div>
-                                <img  src="assets/png/logotipo.png" class="imgCard">
-                                <h5>
-                                    Prototipagem desenvolvida para trabalho escolar. 
-                                </h5>
-                            </div>
-                            <img  src="assets/svg/3.svg" class="imgProject">               
-                        </div>
-                        
-                        <div class="cardProjetos row">
-                            <div>
-                                <img  src="https://www.sirio.org.br/wp-content/uploads/esporte-clube-sirio-2.png" class="imgCard">
-                                <h5>
-                                    Software e Prototipagem desenvolvido como Freelancer. 
-                                </h5>
-                            </div>
-                            <img  src="assets/svg/4.svg" class="imgProject">
-                        </div>
-        
-                        <div class="cardProjetos row ">
-                            <div>
-                                <img  src="assets/png/one.png" class="imgCard">
-                                <h5>
-                                    Prototipagem feita em ambiente de trabalho.
-                                </h5>
-                            </div>
-                            <img  src="assets/svg/5.svg" class="imgProject">
-                        </div>
-        
-                        <div class="cardProjetos row web">
-                            <div>
-                                <img  src="assets/svg/cb.svg" class="imgCard">
-                                <h5>
-                                    Prototipagem feita em ambiente de trabalho.
-                                </h5>
-                            </div>               
-                            <img  src="assets/svg/6.svg" class="imgProject">               
-                        </div>
-
-                        <div class="cardProjetos row web">
-                            <div>
-                                <img  src="assets/png/Monitorando2.png" class="imgCard">
-                                <h5>
-                                    Sistema de controle estudantil para organização de Monitorias.
-                                </h5>
-                            </div>               
-                            <img  src="assets/png/7.png" class="imgProject">               
-                        </div>
-
-                        <div class="cardProjetos row web">
-                            <div>
-                                <h4>****</h4>
-                                <h5>
-                                    Sistema para controle de Biblioteca e aluguel de livros.
-                                </h5>
-                            </div>               
-                            <img  src="assets/png/8.png" class="imgProject">               
-                        </div>
-                    </div>
-                    <span class="arrow web" id="rigthArrow" onclick="currentProject(1)"><img src="assets/svg/arrow.svg" id="imgRigthArrow"></span>
-                </div>
-            </div>
-        
-            <img  src="assets/svg/circle/1.svg" class="circleLeft web">
-            
-            <div id="servicos" class="column">
-                <h1>Serviços</h1>
-                <div class="Carousel">
-                    <div class="cardServicos row">
-                        <div>
-                            <h4>Criação de sites</h4>
-                            <h5>Desenvolvimento de sites profissionais, sistemas web, blogs e lojas virtuais.</h5>
-                        </div>
-                            <img src="assets/svg/computer.svg" class="imgCard">
-                    </div>
-                    <div class="cardServicos row">
-                        <div>
-                            <h4>Criação de Aplicativos</h4>
-                            <h5>Desenvolvimento de aplicativos profissionais esportivo, noticiário entre outros.</h5>
-                        </div>
-                            <img src="assets/svg/mobile.svg" class="imgCard">
-                    </div>
-                </div>
-        
-        
-                <div class="Carousel" >
-                    <div class="cardServicos">
-                        <div>
-                            <h4>UI Designer</h4>
-                            <h5>Desenho de layouts confortável, moderno e que se adequa ao seu negócio.</h5>
-                        </div>
-                            <img src="assets/svg/ui.svg" class="imgCard">
-                    </div>
-                    <div class="cardServicos">
-                        <div>
-                            <h4>Responsividade</h4>
-                            <h5>Criação de sites responsivos para maior comodidade.</h5>
-                        </div>
-                            <img src="assets/svg/responsive.svg" class="imgCard">
-                    </div>
-                </div>
-            </div>
-        
-            <img src="assets/svg/circle/3.svg" class=" top web" >
-        
-            <div id="conhecimento" class="row">
-                <div>
-                    <h1>Conhecimentos</h1>
-                    <h5 class="web">Aqui deixo com você um pouco do meu conhecimento adquirido 
-                        em torno de 3 anos no ramo da programação.</h5>
-                </div>
-           
-                <div id="carouselSkill">
-                    <span class="arrow left web" id="leftArrowSkill" onclick="currentSkill(-1)"><img src="assets/svg/arrow.svg" id="imgLeftArrowSkill"></span>
-                
-                    <div id="gridSkill">
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/invision.svg"> 
-                            </div>
-                                  
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/adobe.svg"> 
-                            </div>
-                        </div>
-        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/figma.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/sass.svg"> 
-                            </div>
-                        </div>
-        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/html.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/css.svg"> 
-                            </div>
-                        </div>
-        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/git.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/next.svg"> 
-                            </div> 
-                        </div>
-        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/ionic.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/laravel.svg"> 
-                            </div>
-                        </div>
-                        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/flutter.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/wordpress.svg"> 
-                            </div>
-                        </div>
-        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/angular.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/java.svg"> 
-                            </div>
-                        </div>
-        
-                        <div class="showSkill">
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/js.svg"> 
-                            </div>
-        
-                            <div class="cardSkill">
-                                <img src="assets/svg/logos/ts.svg"> 
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                    <span class="arrow web " id="rigthArrowSkill" onclick="currentSkill(1)"><img src="assets/svg/arrow.svg" id="imgRightArrowSkill"></span>
-                </div>
-            </div>
-        
-            <footer class="web" >
-            
-                <div class="row" id="contentFooter">
-                    <img src="assets/png/icon2.png">
-                    <div id="contact">
-                        <h3>Contato</h3>
-                        <div>
-                            <a href="https://www.linkedin.com/in/wilson-d-73761b203/" target="_Blank"><img src="assets/svg/logos/linkedin.svg" class="imgContact"></a>
-                            <a href="mailto:wilson15548@gmail.com" target="_Blank"><img src="assets/svg/logos/gmail.svg" class="imgContact"></a>
-                            <a href="https://api.whatsapp.com/send?phone=5511996123342" target="_Blank"><img src="assets/svg/logos/whatsapp.svg" class="imgContact"></a>
-                        </div>
-                    </div>
-                    <h5>© 2021 Copyright: <b>Wilson Junior</b></h5>
-                </div>
-                <img src="assets/svg/footer.svg" id="imgFooter">
-        
-            </footer>        
-        </section>
-        
-    </body>
-    <script>
-        function typeWriter(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = '';
-                textoArray.forEach((letra, i) => {
-                    setTimeout(() => elemento.innerHTML += letra, 75 * i);
-                });
-        }
-
-        const titulo = document.querySelector('#text');
-        typeWriter(titulo);
-    </script>
-    <script>
-        var slideIndex = 1;
-        showProject(slideIndex);
-
-        function currentProject(count) {
-            showProject(slideIndex += count);
-        }
-        
-        function showProject(count) {
-            var i;
-            var l = document.querySelector("#leftArrow");
-            var r = document.querySelector("#rigthArrow");
-            var x = document.getElementsByClassName("cardProjetos");
-            
-            if (count >= 5) {
-                slideIndex = 5;
-                $(r).css('opacity', '.5');
-                $(r).hover(function() {
-                    $("#imgRigthArrow").css('cursor', 'no-drop');
-                });
-            } else if (count <= 1) {
-                slideIndex = 1
-                $(l).css('opacity', '.5');
-                $(l).hover(function() {
-                    $("#imgLeftArrow").css('cursor', 'no-drop');
-                });
-            } else {
-                $(l).css('opacity', '1');
-                $(r).css('opacity', '1');
-                $(l).hover(function() {
-                    $("#imgLeftArrow").css('cursor', 'pointer');
-                });
-                $(r).hover(function() {
-                    $("#imgRigthArrow").css('cursor', 'pointer');
-                });
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            x[slideIndex].style.display = "flex";  
-            x[slideIndex-1].style.display = "flex";  
-            
-        }
-    </script>
-    <script>
-        var skillIndex = 1;
-        showSkill(skillIndex);
-
-        function currentSkill(count) {
-            if(skillIndex == 1){
-                showSkill(skillIndex += count);
-                
-            } else if(count == -1 && skillIndex >= 5){
-                showSkill(skillIndex += count - 1);
-            } else if(count == -1){
-                showSkill(skillIndex += count);
-            } else{
-                skillIndex += count;
-                showSkill(skillIndex - 1);
-            }
-        }
-
-        function showSkill(count) {
-            var i;
-            var l = document.querySelector("#leftArrowSkill");
-            var r = document.querySelector("#rigthArrowSkill");
-            var x = document.getElementsByClassName("showSkill");
-            
-            if (count >= x.length - 4) {
-                skillIndex = 5;
-                $(r).css('opacity', '.5');
-                $(r).hover(function() {
-                    $("#imgRightArrowSkill").css('cursor', 'no-drop');
-                });
-                
-            } else if (count <= 1) {
-                skillIndex = 1
-                $(l).css('opacity', '.5');
-                $(l).hover(function() {
-                    $("#imgLeftArrowSkill").css('cursor', 'no-drop');
-                });
-            } else {
-                $(l).css('opacity', '1');
-                $(r).css('opacity', '1');
-
-                $(r).hover(function() {
-                    $("#imgRightArrowSkill").css('cursor', 'pointer');
-                });
-                $(l).hover(function() {
-                    $("#imgLeftArrowSkill").css('cursor', 'pointer');
-                });
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            x[skillIndex].style.display = "flex"; 
-            x[skillIndex+1].style.display = "flex";  
-            x[skillIndex-1].style.display = "flex";  
-            x[skillIndex+2].style.display = "flex";  
-
-
-        }
-        
-        function openMenu(){
-            $("header").css('animation', 'headerOpen .4s forwards');
-            $('#openMenuLegend').css('display', 'none');
-            setTimeout(function () {
-                $("#legend").css('display', 'flex');
-                $("#menuShow").css('display', 'flex');
-
-            }, 400);
-        }
-
-        function closeMenu(){
-            $("header").css('animation', 'headerClose .4s forwards');     
-            $("#menuShow").css('display', 'none');
-            setTimeout(function () {
-                $('#openMenuLegend').css('display', 'flex');
-            }, 400);
-            
-        }
+            <img src="assets/svg/footer.svg" id="imgFooter">
     
-    </script>
-
+        </footer>        
+    </section>
     
+</body>
+<script>
+    function typeWriter(elemento) {
+        const textoArray = elemento.innerHTML.split('');
+        elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+    }
+
+    const titulo = document.querySelector('#text');
+    typeWriter(titulo);
+</script>
+<script>
+    var slideIndex = 1;
+    showProject(slideIndex);
+
+    function currentProject(count) {
+        showProject(slideIndex += count);
+    }
+    
+    function showProject(count) {
+        var i;
+        var l = document.querySelector("#leftArrow");
+        var r = document.querySelector("#rigthArrow");
+        var x = document.getElementsByClassName("cardProjetos");
+        
+        if (count >= 5) {
+            slideIndex = 5;
+            $(r).css('opacity', '.5');
+            $(r).hover(function() {
+                $("#imgRigthArrow").css('cursor', 'no-drop');
+            });
+        } else if (count <= 1) {
+            slideIndex = 1
+            $(l).css('opacity', '.5');
+            $(l).hover(function() {
+                $("#imgLeftArrow").css('cursor', 'no-drop');
+            });
+        } else {
+            $(l).css('opacity', '1');
+            $(r).css('opacity', '1');
+            $(l).hover(function() {
+                $("#imgLeftArrow").css('cursor', 'pointer');
+            });
+            $(r).hover(function() {
+                $("#imgRigthArrow").css('cursor', 'pointer');
+            });
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex].style.display = "flex";  
+        x[slideIndex-1].style.display = "flex";  
+        
+    }
+</script>
+<script>
+    var skillIndex = 1;
+    showSkill(skillIndex);
+
+    function currentSkill(count) {
+        if(skillIndex == 1){
+            showSkill(skillIndex += count);
+            
+        } else if(count == -1 && skillIndex >= 5){
+            showSkill(skillIndex += count - 1);
+        } else if(count == -1){
+            showSkill(skillIndex += count);
+        } else{
+            skillIndex += count;
+            showSkill(skillIndex - 1);
+        }
+    }
+
+    function showSkill(count) {
+        var i;
+        var l = document.querySelector("#leftArrowSkill");
+        var r = document.querySelector("#rigthArrowSkill");
+        var x = document.getElementsByClassName("showSkill");
+        
+        if (count >= x.length - 4) {
+            skillIndex = 5;
+            $(r).css('opacity', '.5');
+            $(r).hover(function() {
+                $("#imgRightArrowSkill").css('cursor', 'no-drop');
+            });
+            
+        } else if (count <= 1) {
+            skillIndex = 1
+            $(l).css('opacity', '.5');
+            $(l).hover(function() {
+                $("#imgLeftArrowSkill").css('cursor', 'no-drop');
+            });
+        } else {
+            $(l).css('opacity', '1');
+            $(r).css('opacity', '1');
+
+            $(r).hover(function() {
+                $("#imgRightArrowSkill").css('cursor', 'pointer');
+            });
+            $(l).hover(function() {
+                $("#imgLeftArrowSkill").css('cursor', 'pointer');
+            });
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[skillIndex].style.display = "flex"; 
+        x[skillIndex+1].style.display = "flex";  
+        x[skillIndex-1].style.display = "flex";  
+        x[skillIndex+2].style.display = "flex";  
+
+
+    }
+    
+    function openMenu(){
+        $("header").css('animation', 'headerOpen .4s forwards');
+        $('#openMenuLegend').css('display', 'none');
+        setTimeout(function () {
+            $("#legend").css('display', 'flex');
+            $("#menuShow").css('display', 'flex');
+
+        }, 400);
+    }
+
+    function closeMenu(){
+        $("header").css('animation', 'headerClose .4s forwards');     
+        $("#menuShow").css('display', 'none');
+        setTimeout(function () {
+            $('#openMenuLegend').css('display', 'flex');
+        }, 400);
+        
+    }
+
+</script>
+
+
 </html>
